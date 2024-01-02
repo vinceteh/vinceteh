@@ -37,8 +37,21 @@
 const a1 = new Date();
 const b = a1.getMonth() + 1;
 const c = a1.getDate();
+const d = a1.getFullYear();
  abc = lunar2024.go(b, c);
 document.write(abc);
+       document.write(d);
 </script> 
+      <script type="text/javascript" charset="utf-8">
+    let a;
+    let time;
+    setInterval(() => {
+      a = new Date();
+	let datestr = a.toLocaleDateString();
+      time = datestr + '  ' + a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+      document.getElementById('time').innerHTML = time;
+    }, 1000);
+  </script>
+  <h2><span id="time"></span>
 </body>
 </html>
